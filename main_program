@@ -39,12 +39,6 @@ def mail():
   attachment.close()
   email_msg.attach(att) 
 
-  #s = smtplib.SMTP('smtp.gmail.com', 587) 
-  #s.starttls() 
-  #s.login(fromaddr, "Password_of_the_sender") 
-  #text = msg.as_string() 
-  #s
-
   server.sendmail(email_msg['From'], email_msg['To'], email_msg.as_string())
   server.quit()
 
